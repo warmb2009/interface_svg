@@ -44,9 +44,9 @@
      inkscape:window-height="1007"
      id="namedview47"
      showgrid="true"
-     inkscape:zoom="12.171875"
-     inkscape:cx="52.336403"
-     inkscape:cy="146.87033"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="167.19123"
+     inkscape:cy="5.4650333"
      inkscape:window-x="0"
      inkscape:window-y="941"
      inkscape:window-maximized="0"
@@ -6016,8 +6016,8 @@ BAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBB//2Q==
   <circle
      style="fill:#31342e;fill-opacity:1;stroke-width:0.37115961;stroke-miterlimit:4;stroke-dasharray:none"
      id="path5163-7"
-     cx="167.07381"
-     cy="443.12515"
+     cx="165.82381"
+     cy="444.06265"
      r="2.7836971" />
   <rect
      style="fill:#f6ed52;fill-opacity:1;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
@@ -6048,4 +6048,10 @@ BAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBB//2Q==
      id="path5427"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="ccccccccc" />
+  <circle
+     style="fill:#31342e;fill-opacity:1;stroke-width:0.37115961;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path5163-7-0"
+     cx="230.89401"
+     cy="444.25156"
+     r="2.7836971" />
 </svg>
