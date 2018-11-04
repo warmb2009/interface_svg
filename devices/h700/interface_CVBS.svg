@@ -14,7 +14,7 @@
    width="1656"
    height="213"
    viewBox="0 0 1656 213"
-   sodipodi:docname="interface_MIC_1.svg"
+   sodipodi:docname="interface_CVBS.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11"
    inkscape:export-filename="/home/jeroen/svg/image/kd_h700.png.png"
    inkscape:export-xdpi="96"
@@ -45,9 +45,9 @@
      inkscape:window-height="1050"
      id="namedview10"
      showgrid="false"
-     inkscape:zoom="2.1352657"
-     inkscape:cx="233.54644"
-     inkscape:cy="51.915892"
+     inkscape:zoom="0.75493043"
+     inkscape:cx="405.19628"
+     inkscape:cy="46.400395"
      inkscape:window-x="0"
      inkscape:window-y="900"
      inkscape:window-maximized="0"
@@ -63,18 +63,6 @@
        cx="391.11841"
        cy="109.55801"
        r="0" />
-    <circle
-       style="display:inline;opacity:0;fill:#ffffff;fill-rule:evenodd"
-       id="path5069-0"
-       cx="776.75781"
-       cy="139.36719"
-       r="7.9411407" />
-    <circle
-       style="display:inline;opacity:0;fill:#000000;fill-rule:evenodd"
-       id="path5071-3"
-       cx="776.68872"
-       cy="139.50529"
-       r="3.9360435" />
     <circle
        style="fill:#e5e1e0;fill-opacity:1;fill-rule:evenodd"
        id="path5091"
