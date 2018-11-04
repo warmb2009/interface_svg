@@ -37,13 +37,13 @@
   <sodipodi:namedview
      inkscape:measure-end="135.938,100"
      inkscape:measure-start="-34.375,218.75"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      inkscape:window-maximized="0"
      inkscape:window-y="900"
      inkscape:window-x="0"
-     inkscape:cy="102.64931"
-     inkscape:cx="977.30116"
-     inkscape:zoom="7.2407734"
+     inkscape:cy="29.42671"
+     inkscape:cx="625.47425"
+     inkscape:zoom="0.90509668"
      showgrid="false"
      id="namedview4"
      inkscape:window-height="1050"
@@ -55,7 +55,9 @@
      objecttolerance="10"
      borderopacity="1"
      bordercolor="#666666"
-     pagecolor="#ffffff" />
+     pagecolor="#ffffff"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="false" />
   <g
      inkscape:groupmode="layer"
      id="layer7"
@@ -73,7 +75,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="背景"
-     style="display:inline">
+     style="display:none">
     <image
        y="0.65837097"
        x="1.4049978"
@@ -87,7 +89,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="灰色底"
-     style="display:none;opacity:1">
+     style="display:inline;opacity:1">
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 17.882443,182.20246 18.544755,33.844418 1639.2239,33.513262 l 1.6558,148.689198 z"
@@ -103,7 +105,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="黑底"
-     style="display:none;opacity:1">
+     style="display:inline;opacity:1">
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 4.9673452,158.02805 3.9738761,17.948913 1653.4636,18.611226 l 0.6623,139.747974 -13.5774,-0.66231 -2.9804,-2.31809 -3.6427,-4.30504 -0.6623,-13.57741 -5.9608,0.33116 -6.9543,-1.65578 -3.9739,-3.31157 -3.3115,-4.63618 -0.9935,-17.55129 3.9739,-4.63619 2.9804,-2.64925 3.6427,-3.31156 11.5905,0.33115 -0.6624,-62.919702 -412.2896,0.993469 -0.3312,6.954283 -2.6492,4.636189 -5.6297,3.973876 -3.6427,1.655782 -13.9086,0.331156 -4.9673,-1.986938 -3.6427,-2.980407 -4.3051,-5.298502 0.6624,-8.941221 -705.36305,1.655782 -0.33116,5.629658 -1.65578,3.642719 -2.98041,4.636189 -6.29197,3.311564 H 449.048 l -6.29197,-2.649251 -2.64925,-4.305033 -1.65578,-4.636188 V 37.487138 L 25.167882,39.142919 V 99.74453 l 9.272378,0.33116 5.960814,2.64925 3.973876,4.96734 1.986938,4.30504 v 13.90856 l -2.649251,5.2985 -5.629657,5.62966 -3.311564,1.32463 -10.928159,-0.33116 0.331156,19.20707 z"
@@ -119,7 +121,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="白色条"
-     style="display:none">
+     style="display:inline">
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 169.7681,44.87104 v 126.68213 l 1.8733,2.80995 3.98077,3.27828 979.03503,0.93665 2.81,-2.34162 2.81,-5.38575 -0.7025,-121.530545 -1.405,-4.214932 -5.8541,-3.044117 -195.99433,-0.468326 -4.21493,2.809955 -3.27828,3.512443 0.23416,48.237557 -311.20249,-0.468326 V 48.383484 l -1.63914,-3.746607 -3.98077,-3.27828 H 500.40611 l -3.27828,2.809955 -2.34163,4.917421 v 28.802036 l -129.02376,-0.234163 0.23417,-33.719457 -4.4491,-4.683258 -5.85407,-2.575792 -177.72964,0.468326 -5.15158,3.746606 z"
@@ -252,12 +254,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:13.33333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="1214.504"
-       y="173.50134"
+       x="1214.2969"
+       y="174.81081"
        id="text90-3-6-9-2-0"><tspan
          sodipodi:role="line"
-         x="1214.504"
-         y="173.50134"
+         x="1214.2969"
+         y="174.81081"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff"
          id="tspan128-1-7-9">USB2</tspan></text>
     <text
@@ -364,30 +366,5 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="接口"
-     style="display:inline;opacity:1">
-    <circle
-       style="fill:#000000;fill-opacity:1"
-       id="path4643"
-       cx="391.11841"
-       cy="109.55801"
-       r="0" />
-    <circle
-       style="display:inline;opacity:0;fill:#ffffff;fill-rule:evenodd"
-       id="path5069-0"
-       cx="776.75781"
-       cy="139.36719"
-       r="7.9411407" />
-    <circle
-       style="display:inline;opacity:0;fill:#000000;fill-rule:evenodd"
-       id="path5071-3"
-       cx="776.68872"
-       cy="139.50529"
-       r="3.9360435" />
-    <circle
-       style="display:inline;opacity:0;fill:#e5e100;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.58365196;stroke-opacity:1"
-       id="path5093-6-1"
-       cx="986.18164"
-       cy="79.992188"
-       r="10.760944" />
-  </g>
+     style="display:inline;opacity:1" />
 </svg>
