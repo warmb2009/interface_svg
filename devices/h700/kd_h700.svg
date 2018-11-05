@@ -154,15 +154,15 @@
      inkscape:measure-start="-34.375,218.75"
      inkscape:current-layer="layer4"
      inkscape:window-maximized="0"
-     inkscape:window-y="0"
-     inkscape:window-x="1366"
-     inkscape:cy="81.734767"
-     inkscape:cx="1436.8604"
-     inkscape:zoom="1.8101934"
+     inkscape:window-y="35"
+     inkscape:window-x="1380"
+     inkscape:cy="28.001016"
+     inkscape:cx="1220.6086"
+     inkscape:zoom="1.28"
      showgrid="false"
      id="namedview4"
-     inkscape:window-height="900"
-     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-width="1412"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10"
@@ -797,7 +797,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="DIV_1"
+       id="DVI1"
        transform="translate(0.59885016,0.27627697)">
       <circle
          r="0"
@@ -1053,7 +1053,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="DVI_2"
+       id="DVI2"
        transform="translate(156.38331,-0.27614885)">
       <circle
          r="0"
@@ -1401,7 +1401,8 @@
          style="fill:#efe3d0;fill-opacity:1;stroke-width:0.13810679" />
     </g>
     <g
-       id="MIC2">
+       id="MIC2"
+       onclick="">
       <g
          id="g5291">
         <g
@@ -1693,7 +1694,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="CVS_IN"
+       id="CVBS_IN"
        transform="translate(0.41432154,54.690296)">
       <circle
          r="0"
@@ -1735,7 +1736,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="VGA_1"
+       id="VGA1"
        transform="translate(0.28221389,-1.7206963e-4)">
       <circle
          r="0"
@@ -1923,7 +1924,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="VGA_2"
+       id="VGA2"
        transform="translate(-0.10841109,60.156078)">
       <circle
          r="0"
@@ -2111,7 +2112,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="USB_1"
+       id="USB1"
        transform="translate(-1.206789,-0.17724999)">
       <circle
          r="0"
@@ -2137,7 +2138,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="USB_2"
+       id="USB2"
        transform="translate(44.886961,-0.95850001)">
       <circle
          r="0"
@@ -2181,14 +2182,14 @@
       <path
          sodipodi:nodetypes="ccccccccc"
          inkscape:connector-curvature="0"
-         id="RS-422"
+         id="RS_422"
          d="m 1277.3437,70.51953 8.4961,10e-7 -0.1953,-6.640626 27.3438,-0.09766 v 6.738281 l 8.0078,0.195313 -0.1953,27.929688 -43.0664,0.195312 z"
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          inkscape:label="#path1059-56" />
       <path
          sodipodi:nodetypes="ccccccccc"
          inkscape:connector-curvature="0"
-         id="RS-232"
+         id="RS_232"
          d="m 1277.7605,147.4181 h 8.4961 l -0.1953,6.64063 27.3438,0.0977 v -6.73828 l 8.0078,-0.19532 -0.1953,-27.92969 -43.0664,-0.19531 z"
          style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          inkscape:label="#path1059-5-9" />
@@ -2215,14 +2216,14 @@
       <path
          sodipodi:nodetypes="ccccccccc"
          inkscape:connector-curvature="0"
-         id="LAN_2"
+         id="LAN2"
          d="m 1359.3437,71.329136 16.0041,-0.07331 0.041,-6.223358 12.1781,-0.177001 0.049,6.19463 15.0878,0.11162 0.098,32.312543 -43.0664,0.22322 z"
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.0690825px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          inkscape:label="#path1059" />
       <path
          sodipodi:nodetypes="ccccccccc"
          inkscape:connector-curvature="0"
-         id="LAN_1"
+         id="LAN1"
          d="m 1359.7842,146.40635 h 15.6944 v 5.46672 l 14.1545,0.0286 0.024,-5.16189 13.5084,-0.25253 -0.3334,-34.42071 -43.0664,-0.19531 z"
          style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          inkscape:label="#path1059-5" />
@@ -2258,7 +2259,7 @@
     <g
        style="display:inline;opacity:1"
        inkscape:label="接口"
-       id="layer4-4"
+       id="Power"
        transform="translate(0.27623499,-0.41431627)">
       <circle
          r="0"
