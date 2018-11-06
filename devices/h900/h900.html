@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>H900会议终端 设备接口图</title>
+  </head>
+  <body>
+    <object id="h900" data="kd_h900.svg" title="bottom" type="image/svg+xml" width="1000" height="800"></object>
+  </body>
+  <script>
+    function click_interface(ext, parm)
+    {
+	console.log(ext.currentTarget.id);
+	switch( ext.currentTarget.id){
+	case "MIC1":
+	    break;
+	case "MIC2":
+	    break;
+	case "TRS_L":
+	    break;
+	case "TRS_R":
+	    break;
+	case "LINE_IN_L":
+	    break;
+	case "LINE_IN_L":
+	    break;
+	case "LINE_OUT_L":
+	    break;
+	case "LINE_OUT_R":
+	    break;
+	case "DVI1":
+	    break;
+	case "DVI2":
+	    break;
+	case "CVBS_IN":
+	    break;
+	case "CVBS_OUT":
+	    break;
+	case "VGA1":
+	    break;
+	case "VGA2":
+	    break;
+	case "USB1":
+	    break;
+	case "USB2":
+	    break;
+	case "RS_232":
+	    break;
+	case "RS_422_":
+	    break;
+	case "LAN1":
+	    break;
+	case "LAN2":
+	    break;
+	case "Switch":
+	    break;
+	case "Power":
+	    break;    
+	}
+    }
+
+    var obj = document.getElementById('h900');
+    
+    obj.addEventListener('load', function(){
+	var svgDoc = obj.getSVGDocument();
+
+	svgDoc.getElementById("MIC1").addEventListener('click', click_interface, "MIC1");
+	svgDoc.getElementById("MIC2").addEventListener('click', click_interface);
+	svgDoc.getElementById("MIC3").addEventListener('click', click_interface);
+	svgDoc.getElementById("MIC4").addEventListener('click', click_interface);
+	svgDoc.getElementById("MIC5").addEventListener('click', click_interface);
+	
+
+	svgDoc.getElementById("TRS_L").addEventListener('click', click_interface);
+	svgDoc.getElementById("TRS_R").addEventListener('click', click_interface);
+	
+	svgDoc.getElementById("RCA_OUT_L").addEventListener('click', click_interface);
+	svgDoc.getElementById("RCA_OUT_R").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("RCA_IN_L").addEventListener('click', click_interface);
+	svgDoc.getElementById("RCA_IN_R").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("DVI_OUT_1").addEventListener('click', click_interface);
+	svgDoc.getElementById("DVI_OUT_2").addEventListener('click', click_interface);
+	svgDoc.getElementById("DVI_OUT_3").addEventListener('click', click_interface);
+	svgDoc.getElementById("DVI_IN_1").addEventListener('click', click_interface);
+	svgDoc.getElementById("DVI_IN_2").addEventListener('click', click_interface);
+	svgDoc.getElementById("DVI_IN_3").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("CVBS_IN").addEventListener('click', click_interface);
+	svgDoc.getElementById("CVBS_OUT").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("HDMI1").addEventListener('click', click_interface);
+	svgDoc.getElementById("HDMI2").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("USB1").addEventListener('click', click_interface);
+	svgDoc.getElementById("USB2").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("RS_422_485").addEventListener('click', click_interface);
+	svgDoc.getElementById("RS_232").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("LAN1").addEventListener('click', click_interface);
+	svgDoc.getElementById("LAN2").addEventListener('click', click_interface);
+
+	svgDoc.getElementById("Switch").addEventListener('click', click_interface);
+	svgDoc.getElementById("Power").addEventListener('click', click_interface);
+});
+  </script>
+</html>
