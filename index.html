@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>机柜管理</title>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -12,11 +13,34 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+      .body {
+	  display: table;
+	  background-color: green;
+      }
+
+      .left-side {
+	  background-color: blue;
+	  float: none;
+	  display: table-cell;
+	  border: 1px solid;
+      }
+
+      .right-side {
+	  background-color: red;
+	  float: none;
+	  display: table-cell;
+	  border: 1px solid;
+      }
+
+
+
+    </style>
   </head>
   <body>
-    <div class="row" style="background:lightgrey; border:1px solid grey;">
 
-      <div  class="col-md-2">
+    <div class="row body" style="background:lightgrey; border:1px solid grey;">
+      <div  class="col-md-2 left-side">
 	<div class="left-area" style="border=2px solid black; outline: 1px solid orange;">
 	  <div class="cliente">
 	    H700
@@ -32,123 +56,118 @@
 	  </div>
 	</div>
       </div>
-      <div  class="col-md-6">
-	<div class="left-area" style="border=2px solid black; outline: 1px solid orange;">
-	  <div class="btn-toolbar">dsfasfd</div>
-	  <svg width="960" height="600"></svg>
-	  <script>
+      <div class="col-md-10 pre-scrollable right-side">
+	<div class="btn-toolbar">dsfasfd</div>
+	<svg preserveAspectRatio="" viewBox="0 0 300 300">
+	  <rect width="100%" height="100%" fill="red" />
+	</svg>
 
-	    var zoom = d3.zoom()
-		.scaleExtent([1, 10])
-		.on("zoom", zoomed);
+	<script>
+	  //d3 zoom
+	  var zoom = d3.zoom()
+	      .on("zoom", zoomed);
+	  
+	  function zoomed() {
+	      var transform = d3.zoomTransform(this);
+	      this.scale = transform.k;
+	      
+	      d3.select(this).attr("transform", "translate(" + transform.x + "," + transform.y + ")scale(" + transform.k + ")");
+	  }
 
-	    function zoomed() {
-		var transform = d3.zoomTransform(this);
-		this.scale = transform.k;
-		
-		d3.select(this).attr("transform", "translate(" + transform.x + "," + transform.y + ")scale(" + transform.k + ")");
-	    }
+	  
+	  
+	  var drag = d3.drag()
+	      .on("drag", dragmove);
 
+	  function dragmove()
+	  {
+	      d3.select(this)
+		  .attr('transform', "translate(" + d3.event.x + ", " + d3.event.y + ")");
+	  }
+	  
+	  var length = 42;
 
-	    var drag = d3.drag()
-		.on("drag", dragmove);
-
-	    function dragmove()
-	    {
-		//var transform = 
-		var width = 0//d3.select(this).attr("width")
-		var height = 0//d3.select(this).attr("height")
-		
-		//console.log(d);
-		d3.select(this)
-		.attr('transform', "translate(" + d3.event.x + ", " + d3.event.y + ")");
-		//.attr("cx", d.cx = d3.event.x)
-		//.attr("cy", d.cy = d3.event.y)
-	    }
-
-
-	    //var u_rate = 550/43.5;
-	    var length = 42;
-
-	    
-	    var title_width = 240;
-	    var title_height = 30;
-	    var title_color = 'dimgray';
-	    
-	    var u_width = title_width * 8 / 10;
-	    var u_height = u_width / 443 * 43.5;
-	    
-	    var object_x = 0, object_y = 0;
-	    
-	    var svg = d3.select("svg");
-	    var width = svg.attr("width");
-	    var height = svg.attr("height");
-
-	    var g = svg.append("g").call(drag);
-	    g.call(zoom);
-
-	    // 机柜名称部分
-	    g.append('rect').attr('width', title_width / 10 - 2)
+	  var title_width = 240;
+	  var title_height = 30;
+	  var title_color = 'dimgray';
+	  
+	  var u_width = title_width * 8 / 10;
+	  var u_height = u_width / 443 * 43.5;
+	  
+	  var object_x = 0, object_y = 0;
+	  
+	  var svg = d3.select("svg");
+	  var width = svg.attr("width");
+	  var height = svg.attr("height");
+	  
+	  var g_main = svg.append("g").call(drag);
+	  g_main.call(zoom);
+	  
+	  var g = g_main.append('g');
+	  
+	  //svg.call(zoom);
+	  // 机柜名称部分
+	  g.append('rect').attr('width', title_width / 10 - 2)
     .attr('height', title_height)
     .attr('fill', title_color)
     .attr('x', object_x)
     .attr('y', object_y); //左边小格
-	    g.append('rect').attr('width', title_width / 10 * 8)
+	  g.append('rect').attr('width', title_width / 10 * 8)
     .attr('height', title_height)
     .attr('fill', title_color)
     .attr('x', title_width / 10 + object_x)
     .attr('y', object_y);
-	    g.append('rect').attr('width', title_width / 10 - 2)
+	  g.append('rect').attr('width', title_width / 10 - 2)
     .attr('height', title_height)
     .attr('fill', title_color)
     .attr('x', 9 * title_width / 10 + 2 + object_x)
     .attr('y', object_y);
-	    
-	    var text = g.append('text').text('图腾机柜')
-		.attr('fill', 'white')
-		.attr('x', title_width / 2)
-		.attr('y', title_height / 2)
-		.attr('text-anchor', 'middle')
-		.attr('font-size', title_height / 2 + 'px')
-		.attr('dy', 8)
+	  
+	  var text = g.append('text').text('图腾机柜')
+	      .attr('fill', 'white')
+	      .attr('x', title_width / 2)
+	      .attr('y', title_height / 2)
+	      .attr('text-anchor', 'middle')
+	      .attr('font-size', title_height / 2 + 'px')
+	      .attr('dy', 8)
 
-	    //画背景, 在背景之上画出1U的机位
-	    var rack_height = length * u_height;
-	    var rack_width = title_width;
-	    g.append('rect').attr('width', rack_width).attr('height', rack_height)
+	  //画背景, 在背景之上画出1U的机位
+	  var rack_height = length * u_height;
+	  var rack_width = title_width;
+	  g.append('rect').attr('width', rack_width).attr('height', rack_height)
     .attr('x', object_x)
     .attr('y', object_y + title_height)
     .attr('fill', 'DarkSlateGray');
-	    
-	    
-	    
-	    for(var i = 0; i < length; i ++)
-	    {
-		var cur_y = u_height * i + title_height;
-		var cur_x = title_width / 10;
+	  
+	  
+	  
+	  for(var i = 0; i < length; i ++)
+	  {
+	      var cur_y = u_height * i + title_height;
+	      var cur_x = title_width / 10;
 
-		
-		g.append('rect').attr('width', u_width)
-		    .attr('height', u_height)
-		    .attr('stroke', 'black')
-		    .attr('stroke-width', '1')
-		    .attr('x', cur_x)
-		    .attr('y', cur_y)
-		    .attr('fill', 'gray');
-		
-		g.append('text').text(length - i)
-		    .attr('fill', 'white')
-		    .attr('x', title_width / 2)
-		    .attr('y', cur_y + u_height / 2 ) 
-		    .attr('text-anchor', 'middle')
-		    .attr('font-size', u_height + 'px')
-		    .attr('dy', 8);
-	    }
+	      
+	      g.append('rect').attr('width', u_width)
+		  .attr('height', u_height)
+		  .attr('stroke', 'black')
+		  .attr('stroke-width', '1')
+		  .attr('x', cur_x)
+		  .attr('y', cur_y)
+		  .attr('fill', 'gray');
+	      
+	      g.append('text').text(length - i)
+		  .attr('fill', 'white')
+		  .attr('x', title_width / 2)
+		  .attr('y', cur_y + u_height / 2 ) 
+		  .attr('text-anchor', 'middle')
+		  .attr('font-size', u_height + 'px')
+		  .attr('dy', 8);
+	  }
 
 
-	  </script>
-	</div>
+	</script>
       </div>
+
     </div>
   </body>
 </html>
