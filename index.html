@@ -39,7 +39,7 @@
 	    .on("zoom", zoomed);
 	
 	function zoomed() {
-	    d3.select('#g_main').attr("transform", d3.event.transform);
+	    d3.select('#g_object').attr("transform", d3.event.transform);
 	}
 
 	
@@ -68,7 +68,8 @@
 	//主要框架内 加入三个左 中 右框架
 	var g_left = g_main.append('g');
 	var g_center = g_main.append('g');
-	var g = g_main.append('g');
+	var g_right = g_main.append('g').attr("id", "g_view");
+
 
 	
 	//左侧
@@ -80,7 +81,7 @@
 	g_center.attr('height', '2000');
 	
 	//右侧窗口
-	g.attr('width', '2000')
+	g_right.attr('width', '2000')
     .attr('height', '2000')
 
 
@@ -95,11 +96,12 @@
     .attr('height', '100%')
     .attr('fill', 'green');
 
-	g.append('rect')
+	g_right.append('rect')
     .attr('width', '100%')
     .attr('height', '100%')
     .attr('fill', 'yellow');
-	
+
+	var g = g_right.append('g').attr('id', 'g_object');
 	//svg.call(zoom);
 	// 机柜名称部分
 	g.append('rect').attr('width', title_width / 10 - 2)
