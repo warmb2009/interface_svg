@@ -28,7 +28,7 @@
   </head>
   <body>
     <div style="background:lightgrey; border:1px solid grey;">
-      <svg preserveAspectRatio="" viewBox="0 0 300 300">
+      <svg preserveAspectRatio="xMinYMin meet" viewBox="0,0,800,3000" >
 	<rect width="100%" height="100%" fill="black" />
       </svg>
 
@@ -66,40 +66,31 @@
 
 	
 	//主要框架内 加入三个左 中 右框架
+
+
+	var g_right = g_main.append('g').attr("id", "g_view").attr('x', '200').attr('y', '0');
+	var g_center = g_main.append('g').attr('x', '100').attr('y', '0').attr('ry', 100);
 	var g_left = g_main.append('g');
-	var g_center = g_main.append('g');
-	var g_right = g_main.append('g').attr("id", "g_view");
-
-
 	
 	//左侧
-	g_left.attr('width', '100');
-	g_left.attr('height', '2000');
-
+	g_left.attr('width', '140');
+	g_left.attr('height', '200');
+	//g_left.attr('x', '100');
+	
 	//中间
 	g_center.attr('width', '100');
-	g_center.attr('height', '2000');
+	g_center.attr('height', '200');
+
 	
 	//右侧窗口
-	g_right.attr('width', '2000')
-    .attr('height', '2000')
+	g_right.attr('width', '200')
+	g_right.attr('height', '200')
 
 
 	//设定背景  加入rect
-	g_left.append('rect')
-    .attr('width', '100%')
-    .attr('height', '100%')
-    .attr('fill', 'red');
-
-	g_center.append('rect')
-    .attr('width', '100%')
-    .attr('height', '100%')
-    .attr('fill', 'green');
-
-	g_right.append('rect')
-    .attr('width', '100%')
-    .attr('height', '100%')
-    .attr('fill', 'yellow');
+	g_left.attr('fill', 'red');
+	g_center.attr('fill', 'green')
+	g_right.attr('fill', 'yellow')
 
 	var g = g_right.append('g').attr('id', 'g_object');
 	//svg.call(zoom);
