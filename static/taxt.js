@@ -47,14 +47,24 @@ function addJigui(g, length, title)
 	var cur_y = u_height * i + title_height;
 	var cur_x = title_width / 10;
 
+	var rect = g.append('rect');
 	
-	g.append('rect').attr('width', u_width)
+	rect.attr('width', u_width)
 	    .attr('height', u_height)
 	    .attr('stroke', 'black')
 	    .attr('stroke-width', '1')
 	    .attr('x', cur_x)
 	    .attr('y', cur_y)
-	    .attr('fill', 'gray');
+	    .attr('fill', 'gray')
+	    .on("mouseover",function () {
+		d3.select(this).attr('fill', 'blue');
+	    })
+	    .on("mouseout",function () {
+		d3.select(this).attr('fill', 'gray');
+	    })
+	    .on("mousemove",function () {
+		d3.select(this).attr('fill', 'black');
+	    });
 	
 	g.append('text').text(length - i)
 	    .attr('fill', 'white')
@@ -62,7 +72,9 @@ function addJigui(g, length, title)
 	    .attr('y', cur_y + u_height / 2 ) 
 	    .attr('text-anchor', 'middle')
 	    .attr('font-size', u_height + 'px')
-	    .attr('dy', 8);
+	    .attr('dy', 8)
+	    .attr('style', 'pointer-events:none;');
+	
     }
     
 }
@@ -70,12 +82,23 @@ function addJigui(g, length, title)
 function btn(node, title, width, height)
 {
     var drag_g = 0;
+
+    
+    var text_width = 0;
+    var text_height = 0;
     
     var start_drag = function(){
 	drag_g = d3.select('#g_main').append('g');
-	drag_g.append('text').text(title);
-
-	drag_g.attr('transform', 'translate(' + d3.event.x + ','+ d3.event.y+')');
+	var text = drag_g.append('text');
+	text.text(title);
+	text.attr('style', 'pointer-events:none');
+	text_width = text.attr('width');
+	text_height = text.attr('height');
+	
+	console.log(text_width);
+	console.log(text_height);
+	
+	drag_g.attr('transform', 'translate(' + (d3.event.x - 20) + ',' + (d3.event.y) +')');
 	console.log('start drag');
 	console.log(d3.event.x);
 	
@@ -88,10 +111,10 @@ function btn(node, title, width, height)
 
     var  draging = function(d){
 	console.log('draging');
-
-	drag_g.attr('transform', 'translate(' + d3.event.x + ','+ d3.event.y+')');
-	drag_g.attr('cx', d3.event.x);
-	drag_g.attr('cy', d3.event.y);
+	
+	drag_g.attr('transform', 'translate(' + (d3.event.x-20) + ','+ (d3.event.y)+')');
+	//drag_g.attr('cx', d3.event.x-width/2);
+	//drag_g.attr('cy', d3.event.y-height/2);
     };
 
     var drag = d3.drag()
