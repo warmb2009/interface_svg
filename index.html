@@ -66,33 +66,47 @@
 
 	
 	//主要框架内 加入三个左 中 右框架
+	var g_right = g_main.append('g')
+	    .attr("id", "g_view")
 
-
-	var g_right = g_main.append('g').attr("id", "g_view").attr('x', '200').attr('y', '0');
-	var g_center = g_main.append('g').attr('x', '100').attr('y', '0').attr('ry', 100);
-	var g_left = g_main.append('g');
+	var g_right_svg = g_right.append('svg')
+	    .attr('x', '200')
+	    .attr('y', '0')
+	    .attr('width', '1200')
+	    .attr('height', '100%')
 	
-	//左侧
-	g_left.attr('width', '140');
-	g_left.attr('height', '200');
-	//g_left.attr('x', '100');
+	var g_right_svg_rect = g_right_svg.append('rect')
+	    .attr('width', '100%')
+	    .attr('height', '100%')
+	    .attr('fill', 'red');
 	
-	//中间
-	g_center.attr('width', '100');
-	g_center.attr('height', '200');
+	var g_center = g_main.append('g')
+	    .attr("id", "g_center")
 
+	var g_center_svg = g_center.append('svg')
+	    .attr('x', '100')
+	    .attr('y', '0')
+	    .attr('width', '100')
+	    .attr('height', '100%')
 	
-	//右侧窗口
-	g_right.attr('width', '200')
-	g_right.attr('height', '200')
+	var g_center_svg_rect = g_center_svg.append('rect')
+	    .attr('width', '100%')
+	    .attr('height', '100%')
+	    .attr("fill", "green");
+	
+	var g_left = g_main.append('g')
+	    .attr("id", "g_left")
+	
+	var g_left_svg = g_left.append('svg')
+	    .attr('width', '100')
+	    .attr('height', '100%')
 
+	var g_left_svg_rect = g_left_svg .append('rect')
+	    .attr('width', '100%')
+	    .attr('height', '100%')
+	    .attr("fill", "blue");
 
-	//设定背景  加入rect
-	g_left.attr('fill', 'red');
-	g_center.attr('fill', 'green')
-	g_right.attr('fill', 'yellow')
-
-	var g = g_right.append('g').attr('id', 'g_object');
+	var g = g_right_svg.append('g').attr('id', 'g_object');
 	//svg.call(zoom);
 	// 机柜名称部分
 	g.append('rect').attr('width', title_width / 10 - 2)
