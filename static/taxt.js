@@ -66,3 +66,70 @@ function addJigui(g, length, title)
     }
     
 }
+
+function btn(node, title, width, height)
+{
+    var drag_g = 0;
+    
+    var start_drag = function(){
+	drag_g = d3.select('#g_main').append('g');
+	drag_g.append('text').text(title);
+
+	drag_g.attr('transform', 'translate(' + d3.event.x + ','+ d3.event.y+')');
+	console.log('start drag');
+	console.log(d3.event.x);
+	
+    };
+
+    var end_drag = function(){
+	console.log('end drag');
+	drag_g.remove();
+    };
+
+    var  draging = function(d){
+	console.log('draging');
+	//console.log(d3.event)
+	//console.log(d3.event.x);
+	//console.log(d3.event.y);
+	drag_g.attr('transform', 'translate(' + d3.event.x + ','+ d3.event.y+')');
+	drag_g.attr('cx', d3.event.x);
+	drag_g.attr('cy', d3.event.y);
+    };
+
+    var drag = d3.drag()
+	.on("start", start_drag)
+    	.on("drag", draging)
+    	.on("end", end_drag);
+
+    
+    var btn_click = function()
+    {
+	console.log("btn click");
+    };
+    
+    var container = node.append('g');
+
+    //加背景
+    container.append('rect')
+	.attr('width', width)
+	.attr('height', height)
+	.attr('fill','red')
+	.on('click', btn_click);
+
+    //加label
+    container.append('text').text(title)
+	.attr('fill', 'white')
+	.attr('x', width/2)
+	.attr('y', height/2*1.5)
+	.attr('text-anchor', 'middle')
+	.attr('font-size', '20px')
+	.on('click', btn_click);
+
+    container.call(drag);
+}
+
+function tableview(node, jsondata)
+{
+    var line_height = 10;
+    
+}
