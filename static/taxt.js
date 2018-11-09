@@ -88,9 +88,7 @@ function btn(node, title, width, height)
 
     var  draging = function(d){
 	console.log('draging');
-	//console.log(d3.event)
-	//console.log(d3.event.x);
-	//console.log(d3.event.y);
+
 	drag_g.attr('transform', 'translate(' + d3.event.x + ','+ d3.event.y+')');
 	drag_g.attr('cx', d3.event.x);
 	drag_g.attr('cy', d3.event.y);
